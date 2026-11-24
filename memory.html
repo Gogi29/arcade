@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мемори — Пиксель</title>
+<meta name="description" content="Найди все пары за минимум ходов. Тренировка памяти на 6 пар.">
+<meta name="keywords" content="мини-игры, играть онлайн, 2048, змейка, мемори, крестики-нолики, бесплатные игры">
+<meta name="theme-color" content="#0C0D10">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Мемори — Пиксель">
+<meta property="og:description" content="Найди все пары за минимум ходов. Тренировка памяти на 6 пар.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://gogi29.github.io/arcade/memory.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230C0D10'/><rect x='26' y='26' width='48' height='48' rx='6' fill='%23C6F135'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><header class="hdr"><div class="wrap hdr-in">
+<a class="brand" href="index.html"><i></i>Пиксель</a>
+<nav class="nav"><a href="index.html#games">Игры</a><a href="index.html#articles">Статьи</a><a href="index.html#sites">Наши сайты</a></nav>
+<a class="btn btn-acc" href="2048.html">Играть →</a>
+</div></header><div class="wrap game">
+<div class="crumbs"><a href="index.html">Главная</a><span>/</span><span>память</span></div>
+<div class="game-head">
+  <div class="eyebrow"><b></b>память</div>
+  <h1>Мемори</h1>
+  <p>Найди все пары за минимум ходов. Тренировка памяти на 6 пар.</p>
+</div>
+<div class="panel">
+<div class="hud"><div>Ходов: <b id="moves">0</b></div><div>Время: <b id="timer">0:00</b></div><button class="btn btn-acc" id="again">Заново</button></div>
+<div id="grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
+<div id="win" style="display:none;margin-top:12px;color:var(--acc);font-family:var(--font-m);font-size:13px"></div>
+<div class="tip">Открывай по две карточки, запоминай и находи пары. Чем меньше ходов — тем лучше.</div>
+</div>
+<div class="help"><h2>Как играть</h2><p>В сетке спрятаны 6 пар картинок. Переворачивай по две: совпали — остаются открытыми. Не совпали — переворачиваются обратно. Цель — открыть все пары за минимум ходов.</p></div>
+</div>
+<section class="sec also"><div class="wrap">
+  <div class="sec-head"><div><div class="kicker">пока играешь</div><h2>Почитать по теме</h2></div><a class="more" href="index.html#articles">Все статьи →</a></div>
+  <div class="grid"><article class="card">
+  <a href="https://gogi29.github.io/edu/kak-uchit-angliyskiy-besplatno-rabochie-sposoby.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/edu/img/01-angliyskiy-besplatno.jpg" alt="Как учить английский бесплатно: рабочие способы" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Английский</span><span>Навык</span></div>
+  <h3><a href="https://gogi29.github.io/edu/kak-uchit-angliyskiy-besplatno-rabochie-sposoby.html" target="_blank" rel="noopener">Как учить английский бесплатно: рабочие способы</a></h3></div>
+</article><article class="card">
+  <a href="https://gogi29.github.io/edu/professii-2026-bez-vyshki-gde-realno-nayti-rabotu-v-rf.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/edu/img/02-professii-bez-vyshki.jpg" alt="Профессии 2026 без вышки: где реально найти работу в РФ" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Карьера</span><span>Навык</span></div>
+  <h3><a href="https://gogi29.github.io/edu/professii-2026-bez-vyshki-gde-realno-nayti-rabotu-v-rf.html" target="_blank" rel="noopener">Профессии 2026 без вышки: где реально найти работу в РФ</a></h3></div>
+</article><article class="card">
+  <a href="https://gogi29.github.io/edu/kak-vybirat-onlayn-kursy-na-chto-smotret-do-oplaty.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/edu/img/03-onlayn-kursy.jpg" alt="Как выбирать онлайн-курсы: на что смотреть до оплаты" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Онлайн-курсы</span><span>Навык</span></div>
+  <h3><a href="https://gogi29.github.io/edu/kak-vybirat-onlayn-kursy-na-chto-smotret-do-oplaty.html" target="_blank" rel="noopener">Как выбирать онлайн-курсы: на что смотреть до оплаты</a></h3></div>
+</article></div>
+</div></section>
+<footer class="ft"><div class="wrap">
+<div class="ft-top">
+  <div style="max-width:340px">
+    <a class="brand" href="index.html"><i></i>Пиксель</a>
+    <p style="margin:12px 0 0">Мини-игры и разборы: техника, финансы, авто, здоровье, путешествия и ещё семь тем.</p>
+  </div>
+  <div class="ft-col" style="display:flex;flex-direction:column;gap:9px">
+    <b style="font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:400">Игры</b>
+    <a href="2048.html">2048</a><a href="snake.html">Змейка</a><a href="memory.html">Мемори</a><a href="tic-tac-toe.html">Крестики-нолики</a>
+  </div>
+  <div class="ft-col" style="display:flex;flex-direction:column;gap:9px">
+    <b style="font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:400">Сайты сети</b>
+    <a href="https://gogi29.github.io/autolab" target="_blank" rel="noopener">АвтоЛаб</a> <a href="https://gogi29.github.io/beauty" target="_blank" rel="noopener">Глянец</a> <a href="https://gogi29.github.io/biz" target="_blank" rel="noopener">Дело</a> <a href="https://gogi29.github.io/edu" target="_blank" rel="noopener">Навык</a> <a href="https://gogi29.github.io/gameguide" target="_blank" rel="noopener">GG Club</a> <a href="https://gogi29.github.io/health" target="_blank" rel="noopener">Тонус</a> <a href="https://gogi29.github.io/home" target="_blank" rel="noopener">Уют</a> <a href="https://gogi29.github.io/moneyhub" target="_blank" rel="noopener">Профит</a> <a href="https://gogi29.github.io/technosovet" target="_blank" rel="noopener">ТехноСовет</a> <a href="https://gogi29.github.io/travel" target="_blank" rel="noopener">Маршрут</a> 
+  </div>
+</div>
+<div class="ft-bottom"><div>© 2026 Пиксель · Игры бесплатные, без регистрации.</div><div>Сделано на чистом HTML/CSS/JS</div></div>
+</div></footer>
+</body></html>
+<script>
+const set=['🍕','🚀','🎮','🐱','🌙','⚡'];
+let deck,open=[],found=0,moves=0,started=false,timer,t=0,locked=false,foundSet=new Set();
+const el=p=>document.getElementById(p);
+const grid=el('grid');
+function reset(){
+  deck=[...set,...set].sort(()=>Math.random()-.5);
+  open=[];found=0;moves=0;started=false;locked=false;foundSet=new Set();clearInterval(timer);
+  el('moves').textContent=0;el('timer').textContent='0:00';t=0;
+  el('win').style.display='none';
+  render();
+}
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function tick(){t++;el('timer').textContent=fmt(t)}
+function render(){
+  grid.innerHTML='';
+  deck.forEach((v,i)=>{
+    const b=document.createElement('button');b.className='mcard';b.dataset.i=i;
+    b.innerHTML='<span>'+v+'</span>';
+    const vis=open.includes(i)||foundSet.has(i);
+    b.classList.toggle('open',vis);
+    b.addEventListener('click',()=>flip(i));
+    grid.appendChild(b);
+  });
+}
+function flip(i){
+  if(locked||foundSet.has(i)||open.includes(i)||open.length===2)return;
+  if(!started){started=true;timer=setInterval(tick,1000)}
+  open.push(i);render();
+  if(open.length===2){
+    moves++;el('moves').textContent=moves;
+    const [a,b]=open;
+    if(deck[a]===deck[b]){
+      foundSet.add(a);foundSet.add(b);found+=2;open=[];render();
+      if(found===deck.length){
+        clearInterval(timer);
+        const w=el('win');w.textContent='Победа! '+moves+' ходов, '+fmt(t)+' с';w.style.display='block';
+      }
+    } else {
+      locked=true;
+      setTimeout(()=>{open=[];locked=false;render()},700);
+    }
+  }
+}
+document.getElementById('again').addEventListener('click',reset);
+reset();
+</script>
+</body></html>
