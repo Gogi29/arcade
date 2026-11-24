@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реакция — Пиксель</title>
+<meta name="description" content="Светофор загорается зелёным — жми как можно быстрее. 5 попыток, замер в миллисекундах.">
+<meta name="keywords" content="мини-игры, играть онлайн, 2048, змейка, мемори, крестики-нолики, бесплатные игры">
+<meta name="theme-color" content="#0C0D10">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Реакция — Пиксель">
+<meta property="og:description" content="Светофор загорается зелёным — жми как можно быстрее. 5 попыток, замер в миллисекундах.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://gogi29.github.io/arcade/reaction.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230C0D10'/><rect x='26' y='26' width='48' height='48' rx='6' fill='%23C6F135'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><header class="hdr"><div class="wrap hdr-in">
+<a class="brand" href="index.html"><i></i>Пиксель</a>
+<nav class="nav"><a href="index.html#games">Игры</a><a href="index.html#articles">Статьи</a><a href="index.html#sites">Наши сайты</a></nav>
+<a class="btn btn-acc" href="2048.html">Играть →</a>
+</div></header><div class="wrap game">
+<div class="crumbs"><a href="index.html">Главная</a><span>/</span><span>скорость</span></div>
+<div class="game-head">
+  <div class="eyebrow"><b></b>скорость</div>
+  <h1>Реакция</h1>
+  <p>Светофор загорается зелёным — жми как можно быстрее. 5 попыток, замер в миллисекундах.</p>
+</div>
+<div class="panel">
+<div class="hud"><div>Попытка: <b id="round">0/5</b></div><div>Среднее: <b id="avg">—</b></div><div>Лучшее: <b id="best">—</b></div><button class="btn btn-acc" id="again">Заново</button></div>
+<div class="lights"><span id="l-r"></span><span id="l-y"></span><span id="l-g"></span></div>
+<button id="react" class="react">Старт</button>
+<div id="msg" class="msg"></div>
+<div class="tip">Клик по полю или <kbd>Пробел</kbd>. Жми только когда загорится зелёный — иначе попытка не считается.</div>
+<div style="margin-top:10px;font-family:var(--font-m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)">Последняя: <b id="last" style="color:var(--fg)">—</b></div>
+</div>
+<div class="help"><h2>Как играть</h2><p>Каждые несколько секунд светофор переключается. Как только загорелся зелёный — жми. Замеряется время между сигналом и нажатием. Всего 5 попыток, считается среднее; рекорд сохраняется в браузере.</p><p>Средняя реакция человека — 250–300 мс. До 220 мс — уровень киберспорта.</p></div>
+</div>
+<section class="sec also"><div class="wrap">
+  <div class="sec-head"><div><div class="kicker">пока играешь</div><h2>Почитать по теме</h2></div><a class="more" href="index.html#articles">Все статьи →</a></div>
+  <div class="grid"><article class="card">
+  <a href="https://gogi29.github.io/gameguide/sobrat-pk-dlya-gta-6-v-2026-skolko-nuzhno-i-na-chem-ne-ekonomit.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/gameguide/img/01-sborka-pc-gta6.jpg" alt="Собрать ПК для GTA 6 в 2026: сколько нужно и на чём не экономить" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Сборка ПК</span><span>GG Club</span></div>
+  <h3><a href="https://gogi29.github.io/gameguide/sobrat-pk-dlya-gta-6-v-2026-skolko-nuzhno-i-na-chem-ne-ekonomit.html" target="_blank" rel="noopener">Собрать ПК для GTA 6 в 2026: сколько нужно и на чём не экономить</a></h3></div>
+</article><article class="card">
+  <a href="https://gogi29.github.io/gameguide/kak-podnyat-fps-bez-pokupki-novogo-zheleza.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/gameguide/img/02-fps-bez-apgreyda.jpg" alt="Как поднять FPS без покупки нового железа" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Оптимизация</span><span>GG Club</span></div>
+  <h3><a href="https://gogi29.github.io/gameguide/kak-podnyat-fps-bez-pokupki-novogo-zheleza.html" target="_blank" rel="noopener">Как поднять FPS без покупки нового железа</a></h3></div>
+</article><article class="card">
+  <a href="https://gogi29.github.io/gameguide/videokarty-do-50-000-rubley-chto-brat-v-2026-godu.html" target="_blank" rel="noopener"><div class="pic"><img src="https://gogi29.github.io/gameguide/img/03-videokarty-50k.jpg" alt="Видеокарты до 50 000 рублей: что брать в 2026 году" loading="lazy"></div></a>
+  <div class="body"><div class="meta"><span>Видеокарты</span><span>GG Club</span></div>
+  <h3><a href="https://gogi29.github.io/gameguide/videokarty-do-50-000-rubley-chto-brat-v-2026-godu.html" target="_blank" rel="noopener">Видеокарты до 50 000 рублей: что брать в 2026 году</a></h3></div>
+</article></div>
+</div></section>
+<footer class="ft"><div class="wrap">
+<div class="ft-top">
+  <div style="max-width:340px">
+    <a class="brand" href="index.html"><i></i>Пиксель</a>
+    <p style="margin:12px 0 0">Мини-игры и разборы: техника, финансы, авто, здоровье, путешествия и ещё семь тем.</p>
+  </div>
+  <div class="ft-col" style="display:flex;flex-direction:column;gap:9px">
+    <b style="font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:400">Игры</b>
+    <a href="2048.html">2048</a><a href="snake.html">Змейка</a><a href="memory.html">Мемори</a><a href="tic-tac-toe.html">Крестики-нолики</a><a href="reaction.html">Реакция</a>
+  </div>
+  <div class="ft-col" style="display:flex;flex-direction:column;gap:9px">
+    <b style="font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:400">Сайты сети</b>
+    <a href="https://gogi29.github.io/autolab" target="_blank" rel="noopener">АвтоЛаб</a> <a href="https://gogi29.github.io/beauty" target="_blank" rel="noopener">Глянец</a> <a href="https://gogi29.github.io/biz" target="_blank" rel="noopener">Дело</a> <a href="https://gogi29.github.io/edu" target="_blank" rel="noopener">Навык</a> <a href="https://gogi29.github.io/gameguide" target="_blank" rel="noopener">GG Club</a> <a href="https://gogi29.github.io/health" target="_blank" rel="noopener">Тонус</a> <a href="https://gogi29.github.io/home" target="_blank" rel="noopener">Уют</a> <a href="https://gogi29.github.io/moneyhub" target="_blank" rel="noopener">Профит</a> <a href="https://gogi29.github.io/technosovet" target="_blank" rel="noopener">ТехноСовет</a> <a href="https://gogi29.github.io/travel" target="_blank" rel="noopener">Маршрут</a> 
+  </div>
+</div>
+<div class="ft-bottom"><div>© 2026 Пиксель · Игры бесплатные, без регистрации.</div><div>Сделано на чистом HTML/CSS/JS</div></div>
+</div></footer>
+</body></html>
+<script>
+const TOTAL=5;
+let round=0,res=[],state='idle',t0=0,timer=null;
+const el=p=>document.getElementById(p);
+const box=el('react'),msg=el('msg');
+function setLights(st){
+  ['r','y','g'].forEach(k=>el('l-'+k).classList.remove('on'));
+  if(st==='wait')el('l-r').classList.add('on');
+  if(st==='go')el('l-g').classList.add('on');
+  if(st==='idle')el('l-y').classList.add('on');
+}
+function paint(main,cls){
+  box.textContent=main;box.className='react '+(cls||'');
+}
+function render(){
+  el('round').textContent=Math.min(round,TOTAL)+'/'+TOTAL;
+  const b=+(localStorage.getItem('pixreact')||0);
+  el('best').textContent=b?b+' мс':'—';
+  if(res.length){
+    el('avg').textContent=Math.round(res.reduce((a,c)=>a+c,0)/res.length)+' мс';
+    el('last').textContent=res[res.length-1]+' мс';
+  }
+}
+function start(){
+  round=0;res=[];el('avg').textContent='—';el('last').textContent='—';msg.textContent='';
+  render();nextRound();
+}
+function nextRound(){
+  if(round>=TOTAL){finish();return}
+  round++;render();
+  state='wait';paint('Жди зелёный…','wait');setLights('wait');
+  const delay=1100+Math.random()*2400;
+  timer=setTimeout(()=>{state='go';t0=performance.now();paint('ЖМИ!','go');setLights('go')},delay);
+}
+function tooEarly(){
+  clearTimeout(timer);state='pause';setLights('idle');paint('Рано! 😅','early');
+  msg.textContent='Нажал до зелёного — эта попытка не считается.';
+  setTimeout(()=>{msg.textContent='';nextRound()},1100);
+}
+function click(){
+  if(state==='idle'){start();return}
+  if(state==='pause')return;
+  if(state==='wait'){tooEarly();return}
+  if(state==='go'){
+    const ms=Math.round(performance.now()-t0);
+    state='pause';res.push(ms);msg.textContent='';
+    paint(ms+' мс','early');setLights('idle');
+    const best=+(localStorage.getItem('pixreact')||0);
+    if(!best||ms<best)localStorage.setItem('pixreact',ms);
+    render();
+    setTimeout(()=>nextRound(),700);
+  }
+}
+function finish(){
+  state='idle';setLights('idle');
+  const avg=Math.round(res.reduce((a,c)=>a+c,0)/res.length);
+  const best=Math.min(...res);
+  let grade='Есть куда расти 🙂';
+  if(avg<220)grade='Реакция киберспортсмена 🔥';
+  else if(avg<260)grade='Отличная реакция 👌';
+  else if(avg<320)grade='Норма для человека 👍';
+  paint(avg+' мс','go');
+  msg.textContent='Среднее: '+avg+' мс · лучшее: '+best+' мс · '+grade+' Нажми «Заново».';
+  render();
+}
+box.addEventListener('click',click);
+document.addEventListener('keydown',e=>{
+  if(e.key===' '||e.key==='Enter'){e.preventDefault();click()}
+});
+el('again').addEventListener('click',()=>{clearTimeout(timer);state='idle';start()});
+render();paint('Старт','');setLights('idle');
+</script>
+</body></html>
